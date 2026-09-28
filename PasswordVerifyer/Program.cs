@@ -6,7 +6,7 @@ class PasswordChecker
     public static void Main(string[] args)
     {
         string input;
-        string pattern = @"[A-Z]\w+\d+@";
+        string pattern = @"(?=.*[A-Z])(?=.*[\d])";
 
         Console.WriteLine("Please enter your password for verification checks");
         input = Console.ReadLine();
@@ -19,7 +19,7 @@ class PasswordChecker
         }
         else
         {
-            Console.WriteLine("Please ensure your password contains a number, one Uppercase letter and a special character");
+            Console.WriteLine("Please ensure your password contains 1 or more Uppercase letter/s or a digit");
         }
     }
 }
